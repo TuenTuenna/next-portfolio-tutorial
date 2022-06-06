@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .bg-primary {
-    @apply bg-white dark:bg-green-800
+    @apply bg-white dark:bg-slate-800
 }
 
 .btn-project {

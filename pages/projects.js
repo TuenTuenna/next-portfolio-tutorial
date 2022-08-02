@@ -9,7 +9,7 @@ export default function Projects({projects}) {
 
     return (
         <Layout >
-            <div className="flex flex-col items-center justify-center min-h-screen mb-10 px-3">
+            <div className="flex flex-col items-center justify-center min-h-screen px-3 mb-10">
                 <Head>
                     <title>빡코딩 포트폴리오</title>
                     <meta name="description" content="오늘도 빡코딩!" />
@@ -20,7 +20,7 @@ export default function Projects({projects}) {
                     <span className="pl-4 text-blue-500">{projects.results.length}</span>
                 </h1>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 p-12 m-4 gap-8">
+                <div className="grid grid-cols-1 gap-8 p-12 m-4 md:grid-cols-2">
                     {projects.results.map((aProject) => (
                         <ProjectItem key={aProject.id} data={aProject}/>
                     ))}
@@ -31,8 +31,10 @@ export default function Projects({projects}) {
     );
 }
 
-// 빌드 타임에 호출
-export async function getStaticProps() {
+// // 빌드 타임에 호출
+// export async function getStaticProps() {
+    // 각 요청 때마다 호출
+export async function getServerSideProps() {
 
     const options = {
         method: 'POST',

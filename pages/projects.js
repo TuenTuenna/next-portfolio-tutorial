@@ -26,15 +26,16 @@ export default function Projects({projects}) {
                     ))}
                 </div>
             </div>
-
         </Layout>
     );
 }
 
-// // 빌드 타임에 호출
+// 빌드 타임에 호출
 // export async function getStaticProps() {
-    // 각 요청 때마다 호출
+
+// 각 요청 때마다 호출
 export async function getServerSideProps() {
+
 
     const options = {
         method: 'POST',
